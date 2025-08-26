@@ -16,7 +16,10 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
+    - nice to see you
+    - howdy
+    - yo
+    
 - intent: goodbye
   examples: |
     - cu
@@ -38,6 +41,13 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - yes, i do
+    - i agree
+    - i would say yes
+    - yeah
+    - thanks
+    - understood
+    - clear
 
 - intent: deny
   examples: |
@@ -48,6 +58,12 @@ nlu:
     - don't like that
     - no way
     - not really
+    - rather not
+    - not so much
+    - never ever
+    - i doubt it
+    - i really don't know
+    - don't know
 
 - intent: mood_great
   examples: |
@@ -65,6 +81,7 @@ nlu:
     - so so perfect
     - so good
     - so perfect
+    - i am happy
 
 - intent: mood_unhappy
   examples: |
@@ -82,6 +99,12 @@ nlu:
     - extremly sad
     - so saad
     - so sad
+    - not so good
+    - not that good
+    - it could be better
+    - a bit depressed
+    - i am tired
+    - i feel exhausted
 
 - intent: bot_challenge
   examples: |
@@ -89,3 +112,18 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+    - are you there?
+    - do you understand me?
+
+- intent: tell_name
+  examples: |
+    - I am [Marcel] (name)
+    - Call me [Anne] (name)
+    - It's [Maren] (name)
+    - My name is [Amira] (name)
+    - I'm [Romy]
+    - People call me [Manuel] (name)
+    - I am called [Marina] (name)
+    - They call me [Annekatrin] (name)
+    - My friends call me [Doreen] (name)
+    - I'm [Katja] (name)

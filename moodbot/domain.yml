@@ -8,6 +8,19 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - tell_name
+
+entities:
+  - name
+
+slots:
+  name:
+    type: text
+    initial_value: "darling"
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: name
 
 responses:
   utter_greet:
@@ -17,17 +30,34 @@ responses:
   - text: "Here is something to cheer you up:"
     image: "https://i.imgur.com/iPa8HCj.jpeg"
 
+  utter_go_walk:
+  - text: "So, {name}, why don't you just go out for a walk?"
+  - text: "a little fresh air might do you some good, right? How about a walk, {name}?"
+
   utter_did_that_help:
-  - text: "Did that help you?"
+  - text: "Did that help you a little?"
+  - text: "Might this cheer you up {}?"
 
   utter_happy:
-  - text: "Great, carry on!"
+  - text: "Great {name}, share your happiness with the world!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Goodbye {name}. I'm here for you, see you soon!"
+  - text: "Goodbye {name} Come back whenever you need a chat. See you!"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_ask_name:
+  - text: "Hi, what's your name?"
+
+  utter_ask_hobbies:
+  - text: "{name}, do you like to do sports?"
+  - text: "{name}, do you like musik?"
+  - text: "What do you like to do in your freetime, {name}?"
+
+  utter_default:
+  - text: "Sorry, I didn't get that, can you rephrase it?"
 
 session_config:
   session_expiration_time: 60
